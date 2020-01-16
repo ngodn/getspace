@@ -38,5 +38,9 @@ public class ActivityxFragment extends Fragment {
         return root;
     }
 
+    public static ActivityxFragment newInstance() {
+        return new ActivityxFragment();
+    }
+
 
 }

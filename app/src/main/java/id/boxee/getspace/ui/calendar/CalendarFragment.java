@@ -32,4 +32,8 @@ public class CalendarFragment extends Fragment {
 //        });
         return root;
     }
+
+    public static CalendarFragment newInstance() {
+        return new CalendarFragment();
+    }
 }

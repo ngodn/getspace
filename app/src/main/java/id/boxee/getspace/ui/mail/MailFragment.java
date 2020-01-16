@@ -32,4 +32,8 @@ public class MailFragment extends Fragment {
 //        });
         return root;
     }
+
+    public static MailFragment newInstance() {
+        return new MailFragment();
+    }
 }

@@ -37,4 +37,8 @@ public class ChatFragment extends Fragment {
 
         return root;
     }
+
+    public static ChatFragment newInstance() {
+        return new ChatFragment();
+    }
 }
