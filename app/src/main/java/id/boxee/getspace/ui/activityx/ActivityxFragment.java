@@ -12,11 +12,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import id.boxee.getspace.R;
 
 public class ActivityxFragment extends Fragment {
 
     private ActivityxViewModel activityxViewModel;
+    private FloatingActionButton fabMain;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

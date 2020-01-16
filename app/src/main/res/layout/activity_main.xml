@@ -20,7 +20,31 @@
         app:labelVisibilityMode="unlabeled"
         app:itemIconTint="@drawable/bottom_navigation_colors"
         app:itemTextColor="@drawable/bottom_navigation_colors"
+        android:translationZ="1dp"
         />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        app:layout_constraintLeft_toLeftOf="@id/nav_view"
+        app:layout_constraintRight_toRightOf="@id/nav_view"
+        app:layout_constraintTop_toTopOf="@id/nav_view"
+        app:layout_constraintBottom_toBottomOf="@id/nav_view"
+        android:layout_marginBottom="16dp"
+        android:translationZ="100dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/signal_primary"
+            android:focusable="true"
+            android:src="@drawable/ic_nav_getspace2"
+            android:tint="@color/core_white"
+            app:maxImageSize="32dp"
+            android:scaleType="center"/>
+
+    </LinearLayout>
 
     <fragment
         android:id="@+id/nav_host_fragment"

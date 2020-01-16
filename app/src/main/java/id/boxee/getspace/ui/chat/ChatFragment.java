@@ -12,11 +12,15 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import id.boxee.getspace.R;
 
 public class ChatFragment extends Fragment {
 
     private ChatViewModel chatViewModel;
+    private FloatingActionButton fabMain;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +34,7 @@ public class ChatFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
+
         return root;
     }
 }
