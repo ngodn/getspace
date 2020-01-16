@@ -23,13 +23,13 @@ public class MailFragment extends Fragment {
         mailViewModel =
                 ViewModelProviders.of(this).get(MailViewModel.class);
         View root = inflater.inflate(R.layout.fragment_mail, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        mailViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+//        final TextView textView = root.findViewById(R.id.text_home);
+//        mailViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//            }
+//        });
         return root;
     }
 }
