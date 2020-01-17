@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/rlrl"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:id="@+id/rlrl">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -45,6 +46,8 @@
             android:scaleType="center"/>
 
     </LinearLayout>
+
+    <include layout="@layout/persistent_bottom_sheet" />
 
     <fragment
         android:id="@+id/nav_host_fragment"

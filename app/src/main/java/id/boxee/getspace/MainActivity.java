@@ -6,10 +6,14 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.annotation.IdRes;
@@ -32,6 +36,8 @@ import id.boxee.getspace.ui.mail.MailFragment;
 public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton fabMain;
+    private LinearLayout    linearLayout;
+    private BottomSheetBehavior     bottomSheetBehavior;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         removeActionBar();
         setContentView(R.layout.activity_main);
+
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -56,28 +63,34 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_space:
-                        Toast.makeText(getApplicationContext(), "FAB", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(), "FAB", Toast.LENGTH_SHORT).show();
+                        showDialogFragmentBottomSheet();
+//                        showFragmentBottomSheet();
                         item.setChecked(true);
                         break;
                     case R.id.navigation_activity:
+                        item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, ActivityxFragment.newInstance(), "frag_activityx")
                                 .addToBackStack(null)
                                 .commit();
                         break;
                     case R.id.navigation_messenger:
+                        item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, ChatFragment.newInstance(), "frag_chat")
                                 .addToBackStack(null)
                                 .commit();
                         break;
                     case R.id.navigation_calendar:
+                        item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, CalendarFragment.newInstance(), "frag_calendar")
                                 .addToBackStack(null)
                                 .commit();
                         break;
                     case R.id.navigation_mail:
+                        item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, MailFragment.newInstance(), "frag_wallet")
                                 .addToBackStack(null)
@@ -97,6 +110,19 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (NullPointerException e){}
     }
+
+    private void showDialogFragmentBottomSheet(){
+        View dialogView = getLayoutInflater().inflate(R.layout.fragment_bottom_sheet, null);
+        BottomSheetDialog dialog = new BottomSheetDialog(this);
+        dialog.setContentView(dialogView);
+        dialog.show();
+    }
+
+    private void showFragmentBottomSheet(){
+        BottomSheetDialogFragment bottomSheetFragment = new BottomSheetDialogFragment();
+        bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
+    }
+
 
 
 }
