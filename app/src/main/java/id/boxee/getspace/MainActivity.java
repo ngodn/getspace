@@ -1,9 +1,11 @@
 package id.boxee.getspace;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -12,6 +14,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fabMain;
     private LinearLayout    linearLayout;
     private BottomSheetBehavior     bottomSheetBehavior;
+    private AppBarConfiguration appBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +40,10 @@ public class MainActivity extends AppCompatActivity {
         removeActionBar();
         setContentView(R.layout.activity_main);
 
-
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+        appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_activity, R.id.navigation_messenger, R.id.navigation_space, R.id.navigation_calendar, R.id.navigation_mail)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -91,6 +94,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_sweet, menu);
+//        return true;
+//    }
+
+//    @Override
+//    public boolean onSupportNavigateUp() {
+//        Toast.makeText(getApplicationContext(), "testest", Toast.LENGTH_LONG).show();
+//        return true;
+//    }
 
 
     public void removeActionBar() {
