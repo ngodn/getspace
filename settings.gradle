@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':smartloginlibrary'
 rootProject.name='Get Space'

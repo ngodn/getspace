@@ -1,4 +1,4 @@
-package id.boxee.getspace;
+package id.boxee.getspace.ui.components;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import id.boxee.getspace.R;
 
 /**
  * Created by becody on 18,08,2019
