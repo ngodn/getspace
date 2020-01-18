@@ -166,6 +166,7 @@ public class LoginActivity extends AppCompatActivity implements SmartLoginCallba
         user.setEmail(emailEditText.getText().toString());
 
         Intent intent=new Intent(LoginActivity.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();
 
