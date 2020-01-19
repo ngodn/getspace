@@ -20,6 +20,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import id.boxee.getspace.ui.apps.AppsFragment;
 import id.boxee.getspace.ui.components.BottomSheetDialogFragment;
 import id.boxee.getspace.ui.activityx.ActivityxFragment;
 import id.boxee.getspace.ui.calendar.CalendarFragment;
@@ -57,9 +58,13 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.navigation_space:
 //                        Toast.makeText(getApplicationContext(), "FAB", Toast.LENGTH_SHORT).show();
-                        showDialogFragmentBottomSheet();
+//                        showDialogFragmentBottomSheet();
 //                        showFragmentBottomSheet();
                         item.setChecked(true);
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.nav_host_fragment, AppsFragment.newInstance(), "frag_apps")
+                                .addToBackStack(null)
+                                .commit();
                         break;
                     case R.id.navigation_activity:
                         item.setChecked(true);

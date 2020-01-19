@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_chat" />
 
     <fragment
+        android:id="@+id/navigation_apps"
+        android:name="id.boxee.getspace.ui.apps.AppsFragment"
+        android:label="@string/title_main"
+        tools:layout="@layout/fragment_apps" />
+
+    <fragment
         android:id="@+id/navigation_calendar"
         android:name="id.boxee.getspace.ui.calendar.CalendarFragment"
         android:label="@string/title_calendar"
