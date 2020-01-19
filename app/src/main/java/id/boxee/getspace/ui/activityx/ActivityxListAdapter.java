@@ -3,6 +3,7 @@ package id.boxee.getspace.ui.activityx;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +34,7 @@ public class ActivityxListAdapter extends RecyclerView.Adapter<ActivityxListAdap
         holder.userAction.setText(dataList.get(position).getUserAction());
         holder.description.setText(dataList.get(position).getDescription());
         holder.activityTime.setText(dataList.get(position).getActivityTime());
+        holder.activityIcon.setImageResource(dataList.get(position).getActivityIcon());
     }
 
     @Override
@@ -42,6 +44,7 @@ public class ActivityxListAdapter extends RecyclerView.Adapter<ActivityxListAdap
 
     public class ContactListItemViewHolder extends RecyclerView.ViewHolder{
         private TextView taskName, userAction, description, activityTime;
+        private ImageView activityIcon;
 
         public ContactListItemViewHolder(View itemView) {
             super(itemView);
@@ -49,6 +52,7 @@ public class ActivityxListAdapter extends RecyclerView.Adapter<ActivityxListAdap
             userAction = (TextView) itemView.findViewById(R.id.user_action_text);
             description = (TextView) itemView.findViewById(R.id.description_text);
             activityTime = (TextView) itemView.findViewById(R.id.activity_time);
+            activityIcon = (ImageView) itemView.findViewById(R.id.activity_icon);
         }
     }
 }

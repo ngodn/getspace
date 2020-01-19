@@ -76,8 +76,8 @@ public class ActivityxFragment extends Fragment {
 
     void addData(){
         activityxListItemArrayList = new ArrayList<>();
-        activityxListItemArrayList.add(new ActivityxListItem("Files", "Teguh sent a file", "FY-Report-2019.xlsx", "17:36"));
-        activityxListItemArrayList.add(new ActivityxListItem("Messenger", "Denny posted a message", "Demo siap dipresentasikan!", "12:01"));
+        activityxListItemArrayList.add(new ActivityxListItem("Files", "Teguh sent a file", "FY-Report-2019.xlsx", "17:36", R.drawable.ic_paper));
+        activityxListItemArrayList.add(new ActivityxListItem("Messenger", "Denny posted a message", "Demo siap dipresentasikan!", "12:01", R.drawable.ic_nav_chat));
 
     }
 

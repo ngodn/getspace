@@ -6,13 +6,15 @@ public class ActivityxListItem {
     private String              userAction;
     private String              description;
     private String              activityTime;
+    private int                 activityIcon;
     
 
-    public ActivityxListItem(String taskName, String userAction, String description, String activityTime) {
+    public ActivityxListItem(String taskName, String userAction, String description, String activityTime, int activityIcon) {
         this.taskName        = taskName;
         this.userAction        = userAction;
         this.description        = description;
         this.activityTime        = activityTime;
+        this.activityIcon       = activityIcon;
     }
 
     public String getTaskName() {
@@ -45,6 +47,14 @@ public class ActivityxListItem {
 
     public void setActivityTime(String activityTime) {
         this.activityTime = activityTime;
+    }
+
+    public int getActivityIcon() {
+        return activityIcon;
+    }
+
+    public void setActivityIcon(int activityIcon) {
+        this.activityIcon = activityIcon;
     }
 
 }
