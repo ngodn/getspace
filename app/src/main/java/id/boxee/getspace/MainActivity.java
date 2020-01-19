@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        fabMain = (FloatingActionButton) findViewById(R.id.fab_main);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = new AppBarConfiguration.Builder(
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(), "FAB", Toast.LENGTH_SHORT).show();
 //                        showDialogFragmentBottomSheet();
 //                        showFragmentBottomSheet();
+                        fabMain.setVisibility(View.GONE);
                         item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, AppsFragment.newInstance(), "frag_apps")
@@ -67,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                                 .commit();
                         break;
                     case R.id.navigation_activity:
+                        fabMain.setVisibility(View.VISIBLE);
                         item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, ActivityxFragment.newInstance(), "frag_activityx")
@@ -74,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                                 .commit();
                         break;
                     case R.id.navigation_messenger:
+                        fabMain.setVisibility(View.VISIBLE);
                         item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, ChatFragment.newInstance(), "frag_chat")
@@ -81,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                                 .commit();
                         break;
                     case R.id.navigation_calendar:
+                        fabMain.setVisibility(View.VISIBLE);
                         item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, CalendarFragment.newInstance(), "frag_calendar")
@@ -88,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                                 .commit();
                         break;
                     case R.id.navigation_mail:
+                        fabMain.setVisibility(View.VISIBLE);
                         item.setChecked(true);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.nav_host_fragment, MailFragment.newInstance(), "frag_wallet")

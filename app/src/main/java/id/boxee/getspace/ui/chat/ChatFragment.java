@@ -59,17 +59,16 @@ public class ChatFragment extends Fragment {
         Toolbar toolbar = view.findViewById(getToolbarRes());
         toolbar.setVisibility(View.VISIBLE);
 
-        buttonGetStarted = view.findViewById(R.id.button_getstarted);
-        buttonGetStarted.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "cont", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getContext(), ContactPickerActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-        });
+//        buttonGetStarted = view.findViewById(R.id.button_getstarted);
+//        buttonGetStarted.setOnClickListener(v -> {
+//            Toast.makeText(getContext(), "cont", Toast.LENGTH_SHORT).show();
+//            Intent intent = new Intent(getContext(), ContactPickerActivity.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            startActivity(intent);
+//        });
 
         actionStartChat = view.findViewById(R.id.action_start_chat);
         actionStartChat.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "cont", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getContext(), ContactPickerActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
