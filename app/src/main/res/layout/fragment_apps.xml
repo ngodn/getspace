@@ -97,7 +97,10 @@
                         android:id="@+id/button_app_files"
                         android:layout_width="53dp"
                         android:layout_height="53dp"
-                        android:src="@drawable/ic_apps_folder"
+                        android:padding="10dp"
+                        android:background="@color/signal_primary"
+                        android:src="@drawable/ic_folder_2"
+                        android:tint="@color/core_white"
                         android:contentDescription="files"
                         />
 
@@ -121,14 +124,17 @@
                         android:id="@+id/button_app_conf"
                         android:layout_width="53dp"
                         android:layout_height="53dp"
-                        android:src="@drawable/ic_nav_saturn"
+                        android:src="@drawable/ic_user_2"
+                        android:padding="10dp"
+                        android:background="@color/core_green"
+                        android:tint="@color/core_white"
                         android:contentDescription="files"
                         />
 
                     <TextView android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Apps"
+                        android:text="Profile"
                         android:textSize="16sp"/>
 
                 </LinearLayout>
@@ -143,14 +149,12 @@
                         android:id="@+id/button_app_3"
                         android:layout_width="53dp"
                         android:layout_height="53dp"
-                        android:src="@drawable/ic_nav_saturn"
                         android:contentDescription="files"
                         />
 
                     <TextView android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Apps"
                         android:textSize="16sp"/>
 
                 </LinearLayout>
@@ -165,14 +169,12 @@
                         android:id="@+id/button_app_4"
                         android:layout_width="53dp"
                         android:layout_height="53dp"
-                        android:src="@drawable/ic_nav_saturn"
                         android:contentDescription="files"
                         />
 
                     <TextView android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Apps"
                         android:textSize="16sp"/>
 
                 </LinearLayout>
@@ -200,14 +202,12 @@
                         android:id="@+id/button_app_5"
                         android:layout_width="53dp"
                         android:layout_height="53dp"
-                        android:src="@drawable/ic_nav_saturn"
                         android:contentDescription="files"
                         />
 
                     <TextView android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Apps"
                         android:textSize="16sp"/>
 
                 </LinearLayout>
@@ -224,14 +224,12 @@
                         android:id="@+id/button_app_6"
                         android:layout_width="53dp"
                         android:layout_height="53dp"
-                        android:src="@drawable/ic_nav_saturn"
                         android:contentDescription="files"
                         />
 
                     <TextView android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Apps"
                         android:textSize="16sp"/>
 
                 </LinearLayout>
@@ -246,14 +244,12 @@
                         android:id="@+id/button_app_7"
                         android:layout_width="53dp"
                         android:layout_height="53dp"
-                        android:src="@drawable/ic_nav_saturn"
                         android:contentDescription="files"
                         />
 
                     <TextView android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Apps"
                         android:textSize="16sp"/>
 
                 </LinearLayout>
@@ -268,14 +264,12 @@
                         android:id="@+id/button_app_8"
                         android:layout_width="53dp"
                         android:layout_height="53dp"
-                        android:src="@drawable/ic_nav_saturn"
                         android:contentDescription="files"
                         />
 
                     <TextView android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Apps"
                         android:textSize="16sp"/>
 
                 </LinearLayout>
