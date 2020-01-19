@@ -19,11 +19,11 @@
 
         <ImageView
             android:id="@+id/transaction_activity"
-            android:src="@drawable/circle_green"
+            android:src="@drawable/ic_astronaut"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:padding="15dp"
-            tools:src="@drawable/circle_green"
+            android:padding="5dp"
+            tools:src="@drawable/ic_astronaut"
             android:contentDescription="Contact Photo" />
 
     </FrameLayout>
